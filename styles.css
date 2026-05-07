@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-image-vinkel {
-    background-image: url('vinkel.jpg');
+    background-image: url('https://bergsigdv.github.io/vinkel.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -156,7 +156,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-image-pinksterkos {
-    background-image: url('pinksterkos.jpg');
+    background-image: url('https://bergsigdv.github.io/pinksterkos.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
