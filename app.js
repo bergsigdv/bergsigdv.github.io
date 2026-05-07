@@ -12,7 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const linksContainer = document.getElementById('links-container');
 
     // Haal die data met PapaParse
-    Papa.parse(CSV_URL, {
+    const fetchUrl = CSV_URL + '&t=' + new Date().getTime();
+    Papa.parse(fetchUrl, {
         download: true,
         header: true,
         skipEmptyLines: true,
@@ -66,11 +67,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Check if it's the Bergsig link to add the logo background
             if ((link.Website.toLowerCase().includes('bergsigdv.co.za') || link.Name.toLowerCase().includes('uitreik')) && !link.Name.toLowerCase().includes('vinkel') && !link.Name.toLowerCase().includes('pinkster')) {
-                imageContainer.classList.add('card-image-bergsig');
+                const img = document.createElement('img');
+                img.src = 'https://bergsigdv.co.za/wp-content/uploads/2017/07/bergsig-logo-2-1.svg';
+                img.style.maxWidth = '80%';
+                img.style.maxHeight = '80%';
+                img.style.objectFit = 'contain';
+                imageContainer.appendChild(img);
+                imageContainer.style.backgroundColor = '#ffffff';
             } else if (link.Name.toLowerCase().includes('vinkel')) {
-                imageContainer.classList.add('card-image-vinkel');
+                const img = document.createElement('img');
+                img.src = 'https://bergsigdv.github.io/vinkel.jpg';
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+                imageContainer.appendChild(img);
             } else if (link.Name.toLowerCase().includes('pinkster')) {
-                imageContainer.classList.add('card-image-pinksterkos');
+                const img = document.createElement('img');
+                img.src = 'https://bergsigdv.github.io/pinksterkos.jpg';
+                img.style.width = '100%';
+                img.style.height = '100%';
+                img.style.objectFit = 'cover';
+                imageContainer.appendChild(img);
             } else {
                 // Eenvoudige ikoon as daar nie 'n prentjie is nie
                 const icon = document.createElement('i');
