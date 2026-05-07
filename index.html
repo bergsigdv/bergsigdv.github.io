@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bergsig Webgids</title>
+    <!-- Google Fonts: Poppins for headings, Open Sans for body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <img src="https://bergsigdv.co.za/wp-content/uploads/2017/07/bergsig-logo-2-1.svg" alt="Bergsig Logo" class="header-logo">
+            <h1>Bergsig Webgids</h1>
+            <p>Vind al die belangrike skakels hier.</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div id="loader" class="loader">
+            <i class="fas fa-spinner fa-spin"></i> Laai tans skakels...
+        </div>
+        <div id="error-message" class="error-message" style="display: none;">
+            <p><i class="fas fa-exclamation-triangle"></i> Kon nie skakels laai nie. Kontroleer asseblief dat die Google Sheet korrek gepubliseer is.</p>
+        </div>
+        <div id="links-container" class="links-grid">
+            <!-- Skakels sal hier vertoon word -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; <span id="year"></span> NG Kerk Durbanville-Bergsig</p>
+    </footer>
+
+    <!-- PapaParse vir maklike CSV lees -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
