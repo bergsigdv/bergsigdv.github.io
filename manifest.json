@@ -1,0 +1,17 @@
+{
+  "name": "Bergsig Webgids",
+  "short_name": "Bergsig",
+  "description": "Bergsig webgids en skakels.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00879e",
+  "icons": [
+    {
+      "src": "app_icon.png",
+      "sizes": "192x192 512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
