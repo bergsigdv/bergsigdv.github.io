@@ -1,4 +1,4 @@
-const CACHE_NAME = 'bergsig-v2';
+const CACHE_NAME = 'bergsig-v3';
 const urlsToCache = [
   './',
   './index.html',
